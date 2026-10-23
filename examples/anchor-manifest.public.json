@@ -1,0 +1,18 @@
+{
+  "protocol": "EDK-LAB/v0.1-alpha",
+  "note": "SCHEMA ILLUSTRATION ONLY. Locations are fictional; no secret states are recorded.",
+  "profile": "irregular-room-manual-reading",
+  "anchors": [
+    {
+      "anchor_id": "A01",
+      "location_hint": "sample shelf, fixed compartment A",
+      "reading_rule": "record the discrete state using a published 0..63 classification rule, once validated"
+    },
+    {
+      "anchor_id": "A02",
+      "location_hint": "sample drawer, fixed compartment B",
+      "reading_rule": "record a clearly distinguishable 0..63 state, or mark unreadable"
+    }
+  ],
+  "warning": "There is no validated reading rule yet. No actual secret observation, key, PIN or verifier belongs here."
+}

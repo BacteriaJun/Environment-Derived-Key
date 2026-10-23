@@ -1,0 +1,9 @@
+include README.md README.en.md LICENSE SECURITY.md CONTRIBUTING.md RELEASE_NOTES.md .gitignore
+recursive-include docs *.md
+recursive-include examples *.json
+recursive-include tests *.py
+recursive-include .github/workflows *.yml
+recursive-include tools *.py
+prune .edk-private
+prune .edk-operations
+global-exclude *.edk-private.json *.event.json *.pyc *.pyo

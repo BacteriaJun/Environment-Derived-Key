@@ -1,0 +1,12 @@
+{
+  "all_invariants_hold": true,
+  "binary_erasure_guess_probability": "81/256",
+  "binary_erasure_with_parity_guess_probability": "73/128",
+  "gate_states": 256,
+  "gf7_private_coordinate_sets": 22,
+  "gf7_reconstruction_cases": 6860,
+  "schema_version": "edk.bounded-verification/v1",
+  "scope": "Exhaustive within stated finite models; no physical entropy, attacker or device proof.",
+  "single_node_loss_transitions": 1536,
+  "sram_write_prefixes": 138
+}

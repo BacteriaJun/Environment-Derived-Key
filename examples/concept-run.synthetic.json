@@ -1,0 +1,20 @@
+{
+  "anchors": 6,
+  "checks": {
+    "all_quorums_agree": true,
+    "ambiguous_observation_rejected": true,
+    "below_threshold_rejected": true,
+    "missing_environment_rejected": true,
+    "mixed_generation_rejected": true,
+    "public_context_roundtrip": true,
+    "repair_preserves_output": true,
+    "unreadable_observation_rejected": true
+  },
+  "mode": "concept_simulation",
+  "profile": "edk.exact-input/v1",
+  "schema_version": "edk.concept-run/v1",
+  "seed": 2026,
+  "software_version": "1.0.0",
+  "source": "synthetic",
+  "verified_quorums": 20
+}

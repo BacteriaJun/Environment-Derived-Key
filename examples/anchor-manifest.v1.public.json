@@ -1,0 +1,12 @@
+{
+  "schema_version": "edk.anchor-manifest/v1",
+  "manifest_id": "fictional-laboratory-study",
+  "anchors": [
+    {"anchor_id": "A01", "location_hint": "fictional sample A", "reading_rule": "Arrow direction: 0 north, 1 east, 2 south, 3 west; ? if between directions. Fictional rule, not entropy evidence.", "state_count": 4},
+    {"anchor_id": "A02", "location_hint": "fictional sample B", "reading_rule": "Slider position: 0 lower stop, 1 upper stop; ? if between stops.", "state_count": 2},
+    {"anchor_id": "A03", "location_hint": "fictional sample C", "reading_rule": "Read the ring notch index 0..7 against the fixed zero mark; ? if unaligned.", "state_count": 8},
+    {"anchor_id": "A04", "location_hint": "fictional sample D", "reading_rule": "Count beads in the marked lane, 0..15; - if the lane cannot be read.", "state_count": 16},
+    {"anchor_id": "A05", "location_hint": "fictional sample E", "reading_rule": "Read the pointer quadrant 0..3 clockwise from the fixed zero mark; ? at a boundary.", "state_count": 4},
+    {"anchor_id": "A06", "location_hint": "fictional sample F", "reading_rule": "Read the lever detent index 0..5; ? between detents; - if absent.", "state_count": 6}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "created_at": "2000-01-01T00:00:00.000000Z",
+  "manifest_fingerprint": "83edecec6a93c1269820373d7e48c6c726cd0e1e2e72d5981f5c5fadbf8670bd",
+  "maximum_operational_erasure_rate": 0.02,
+  "maximum_p95_reading_ms": 10000,
+  "maximum_pairwise_disagreement_rate": 0.01,
+  "minimum_observers": 3,
+  "minimum_sessions": 30,
+  "minimum_span_seconds": 604800,
+  "schema_version": "edk.study-policy/v1"
+}

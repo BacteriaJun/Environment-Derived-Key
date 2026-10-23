@@ -1,0 +1,40 @@
+name: Python tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install -e .
+      - run: python -m unittest discover -s tests -v
+      - run: python -O -m unittest discover -s tests -v
+      - run: python -m edk demo
+      - run: python -m edk simulate-decay --trials 100 --seed 2026
+      - run: python -m edk hardware-demo
+      - run: python -m edk verify-models
+      - run: python -m edk bench-demo
+      - run: python -m edk concept-run --seed 2026
+      - run: python -m edk topology-check examples/hardware-topology.v1.example.json
+      - name: Check native Linux I2C UAPI ABI without device access
+        run: python tools/check_linux_abi.py --require
+      - name: Synthetic observation and lifecycle pipelines
+        run: |
+          python -m edk manifest-check examples/anchor-manifest.v1.public.json
+          python -m edk synthetic-study examples/anchor-manifest.v1.public.json --count 30 --seed 2026
+          python -m edk analyze examples/anchor-manifest.v1.public.json --output "$RUNNER_TEMP/study.aggregate.json"
+          python -m edk simulate-lifecycle --months 12 --trials 100 --maintenance-every 1 --output "$RUNNER_TEMP/lifecycle.synthetic.json"
+      - name: Verify exported source, distributions, sdist rebuild and isolated install
+        run: |
+          python -m pip install "setuptools>=77" wheel
+          python tools/verify_release.py --output "$RUNNER_TEMP/edk-release-candidate"

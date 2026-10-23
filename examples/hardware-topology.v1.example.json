@@ -1,0 +1,13 @@
+{
+  "schema_version": "edk.hardware-topology/v1",
+  "topology_id": "fictional-lab-layout",
+  "threshold": 3,
+  "nodes": [
+    {"index": 1, "adapter": "/dev/i2c-1", "failure_domain": "DomainA"},
+    {"index": 2, "adapter": "/dev/i2c-2", "failure_domain": "DomainB"},
+    {"index": 3, "adapter": "/dev/i2c-3", "failure_domain": "DomainC"},
+    {"index": 4, "adapter": "/dev/i2c-4", "failure_domain": "DomainD"},
+    {"index": 5, "adapter": "/dev/i2c-5", "failure_domain": "DomainB"},
+    {"index": 6, "adapter": "/dev/i2c-6", "failure_domain": "DomainE"}
+  ]
+}

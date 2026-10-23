@@ -1,0 +1,46 @@
+{
+  "anchors": 6,
+  "annotated_misread_fraction": 0.09444444444444444,
+  "correlated_disagreement": {
+    "defined_phi_pairs": 15,
+    "eligible_anchor_pairs": 15,
+    "max_absolute_phi": 1.0,
+    "mean_phi": 0.15917021831505937,
+    "minimum_paired_repeats": 3,
+    "reference": "chronologically_first_session",
+    "status": "calculated"
+  },
+  "declared_source": "synthetic",
+  "externally_labeled_events": {
+    "history_loss": 0,
+    "misread": 17,
+    "none": 144,
+    "physical_erasure": 5,
+    "state_change": 4,
+    "unknown": 10
+  },
+  "interpretation": {
+    "entropy": "No entropy estimate or adversarial recovery probability is inferred.",
+    "erasure": "Operational missingness is not proof of physical or historical information loss.",
+    "events": "Externally assigned labels, not verified causes; unknown stays unknown.",
+    "privacy": "No raw states, anchor identities, timestamps, observers or session IDs; not differential privacy."
+  },
+  "operational_erasure_rate": 0.08333333333333333,
+  "pairwise_disagreement_rate": 0.22074954296160879,
+  "pairwise_disagreements": 483,
+  "pairwise_normal_comparisons": 2188,
+  "reading_time_ms": {
+    "mean": 4430.711111111111,
+    "median": 4546.5,
+    "p95": 7680,
+    "sum": 797528
+  },
+  "readings": 180,
+  "schema_version": "edk.aggregate-report/v1",
+  "sessions": 30,
+  "status_counts": {
+    "ambiguous": 10,
+    "normal": 165,
+    "unreadable": 5
+  }
+}
